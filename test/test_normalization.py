@@ -42,6 +42,6 @@ def test_title_step(text: str, norm: str):
     ("  this text    ", " ", "this text"),
     ("-_--the text---_--", "-_", "the text")
     ])
-def test_title_step(text: str, chars: str, norm: str):
+def test_trim_step(text: str, chars: str, norm: str):
     norm_text = TrimStep(chars)(text)
     assert norm_text == norm
