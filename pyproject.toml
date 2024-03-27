@@ -9,7 +9,8 @@ description = "GEneral PREprocessing Framework for TEXT (gepref_text)"
 authors = [{name="Juan Lara", email="julara@unal.edu.co"}]
 requires-python = ">3.10"
 dependencies = [
-	"gepref==0.1.0"
+	"gepref==0.1.1",
+	"unidecode==1.3.8"
 ]
 
 [project.optional-dependencies]
@@ -19,3 +20,6 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src/"]
+
+[tool.setuptools.package-data]
+pkgname = ["py.typed"]
