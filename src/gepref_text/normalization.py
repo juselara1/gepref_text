@@ -64,3 +64,22 @@ class UnidecodeStep(AbstractTextStep):
         :rtype: str
         """
         return unidecode(data)
+
+class TrimStep(AbstractTextStep):
+    """
+    Trims the text according to a given pattern.
+    """
+
+    def __init__(self, chars: str=" "):
+        self.chars = chars
+
+    def call(self, data: str) -> str:
+        """
+        Preprocess an input text element.
+
+        :param data: Input text element.
+        :type data: str
+        :returns: Preprocessed data.
+        :rtype: str
+        """
+        return data.strip(self.chars)
