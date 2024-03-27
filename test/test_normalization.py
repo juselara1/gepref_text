@@ -1,6 +1,6 @@
 import pytest
 from gepref_text.normalization import (
-        LowerStep, UpperStep, TitleStep, UnidecodeStep
+        LowerStep, UpperStep, TitleStep, UnidecodeStep, TrimStep
         )
 
 @pytest.mark.parametrize("text", [
@@ -36,4 +36,12 @@ def test_title_step(text: str):
     ])
 def test_title_step(text: str, norm: str):
     norm_text = UnidecodeStep()(text)
+    assert norm_text == norm
+
+@pytest.mark.parametrize("text, chars, norm", [
+    ("  this text    ", " ", "this text"),
+    ("-_--the text---_--", "-_", "the text")
+    ])
+def test_title_step(text: str, chars: str, norm: str):
+    norm_text = TrimStep(chars)(text)
     assert norm_text == norm
