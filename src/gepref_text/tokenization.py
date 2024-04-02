@@ -1,6 +1,7 @@
 from nltk.tokenize import word_tokenize, sent_tokenize
 from gepref_text.base import AbstractTextStep
 
+
 class WordTokenStep(AbstractTextStep):
     """
     Performs word tokenization using NLTK.

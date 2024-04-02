@@ -1,7 +1,10 @@
+import nltk
 import pytest
 from gepref_text.tokenization import (
         WordTokenStep, SentTokenStep
         )
+
+nltk.download("punkt")
 
 @pytest.mark.parametrize("text, answer", [
     ("this is a text, let's try this", "this is a text , let 's try this"),
