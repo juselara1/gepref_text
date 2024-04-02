@@ -16,5 +16,6 @@ In this guide we'll explore how to create preprocessing pipelines for text using
    usage/preprocessor
    usage/normalization
    usage/regex
+   usage/filtering
    usage/tokenization
    usage/custom
