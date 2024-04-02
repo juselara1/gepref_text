@@ -21,7 +21,7 @@ view-doc: doc
 	python -mwebbrowser _site/index.html
 
 typetest:
-	mypy src/
+	export MYPYPATH="./stubs/" && mypy src/
 
 unittest:
 	pytest .
