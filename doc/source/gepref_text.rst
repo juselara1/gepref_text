@@ -28,6 +28,14 @@ gepref\_text.regex module
    :undoc-members:
    :show-inheritance:
 
+gepref\_text.tokenization module
+--------------------------------
+
+.. automodule:: gepref_text.tokenization
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
