@@ -6,7 +6,7 @@ You can install `gepref_text` via `pip`:
 pip install gepref_text
 ```
 
-You can also bulid from source with development dependencies:
+You can also build from source with development dependencies:
 
 ```sh
 git clone https://github.com/juselara1/gepref_text

@@ -52,4 +52,4 @@ This will generate something like:
 the main goal of this project is to do something thanks
 ```
 
-You can check the [official documentation](https://juselara1.github.io/gepref_text/)
+You can check the [official documentation](https://juselara1.github.io/gepref_text/) for more information about the modules and more preprocessing steps.

@@ -1,6 +1,6 @@
 import re
 import pytest
-from gepref_text.regex import (
+from gepref_text.regex_sub import (
         RegexRemovalStep, UrlRemovalStep, SpRemovalStep,
         NumRemovalStep, DupSpacesStep
         )

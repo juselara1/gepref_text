@@ -1,6 +1,6 @@
 # Regex
 
-The `regex` module includes components for regex-based text substitution, allowing to replace special characters, numbers, duplicated spaces, URLs, among others.
+The `regex_sub` module includes components for regex-based text substitution, allowing to replace special characters, numbers, duplicated spaces, URLs, among others.
 
 Let's see an example in which we want to perform the following preprocessing operations:
 
@@ -13,7 +13,7 @@ To this end, we can import the relevant components:
 
 ```python
 from gepref_text.base import TextPreprocessor
-from gepref_text.regex import UrlRemovalStep, SpRemovalStep, DupSpacesStep, RegexRemovalStep
+from gepref_text.regex_sub import UrlRemovalStep, SpRemovalStep, DupSpacesStep, RegexRemovalStep
 ```
 
 Let us detail these components:

@@ -12,6 +12,14 @@ gepref\_text.base module
    :undoc-members:
    :show-inheritance:
 
+gepref\_text.filtering module
+-----------------------------
+
+.. automodule:: gepref_text.filtering
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 gepref\_text.normalization module
 ---------------------------------
 
@@ -20,10 +28,10 @@ gepref\_text.normalization module
    :undoc-members:
    :show-inheritance:
 
-gepref\_text.regex module
--------------------------
+gepref\_text.regex\_sub module
+------------------------------
 
-.. automodule:: gepref_text.regex
+.. automodule:: gepref_text.regex_sub
    :members:
    :undoc-members:
    :show-inheritance:
