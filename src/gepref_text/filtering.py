@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Callable
+from typing import Callable, List
 from gepref_text.base import AbstractTextStep
 from nltk.corpus import stopwords
 from pydantic import PositiveInt
@@ -73,3 +73,23 @@ class TokenLenFilterStep(AbstractTokenFilterStep):
         return lambda token: (
                 len(token) >= self.min_len and len(token) <= self.max_len
                 )
+
+class CustomWordFilterStep(AbstractTokenFilterStep):
+    """
+    Excludes words from a custom list.
+
+    :param exclude: Words to exclude.
+    :type exclude: List[str]
+    """
+
+    def __init__(self, exclude: List[str]):
+        self.exclude = exclude
+
+    def get_condition(self) -> Callable[[str], bool]:
+        """
+        Creates a function with the filter condition.
+
+        :returns: Filter condition.
+        :rtype: Callable[[str], bool]
+        """
+        return lambda token: token not in self.exclude
