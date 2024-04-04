@@ -1,6 +1,9 @@
 import nltk
 import pytest
-from gepref_text.filtering import StopwordFilterStep, TokenLenFilterStep
+from typing import List
+from gepref_text.filtering import (
+        StopwordFilterStep, TokenLenFilterStep, CustomWordFilterStep
+        )
 nltk.download("stopwords")
 
 @pytest.mark.parametrize("text, answer", [
@@ -18,4 +21,12 @@ def test_stopword_filter(text: str, answer: str):
     ])
 def test_tokenlen_filter(text: str, answer: str, min_len: int, max_len: int):
     filter_text = TokenLenFilterStep(min_len=min_len, max_len=max_len)(text)
+    assert answer == filter_text
+
+@pytest.mark.parametrize("text, answer, exclude", [
+    ("the text the text is", "the the", ["text", "is"]),
+    ("this is awesome and great", "awesome great", ["this", "is", "and"]),
+    ])
+def test_customword_filter(text: str, answer: str, exclude: List[str]):
+    filter_text = CustomWordFilterStep(exclude=exclude)(text)
     assert answer == filter_text
